@@ -4,7 +4,6 @@ services:
   seed_x_api:
     build:
       context: ./seed_x
-      dockerfile: ./Dockerfile
     volumes:
       - ./seed_x:/app/seed_x/
     ports:

@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  seed_x_api:
+    build:
+      context: ./seed_x
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./seed_x:/app/seed_x/
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env
+    command: python manage.py runserver
+    depends_on:
+      - db
+
+  db:
+    image: postgres:14.1-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+    command: psql --username=${DB_USER} --dbname=${DB_NAME}
+
+volumes:
+  postgres_data:

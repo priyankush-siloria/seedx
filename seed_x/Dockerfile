@@ -1,6 +1,6 @@
 FROM python:3.10.11-alpine as build
 
-WORKDIR /app/seed_x
+WORKDIR /app/seed_x/
 
 RUN apk update \
     && apk add postgresql-dev gcc python3-dev musl-dev

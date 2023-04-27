@@ -1,0 +1,31 @@
+{
+    "good_tag_data": {
+        "tag_type": "Germination",
+        "value": "Not Germinated",
+        "short_name": "NG"
+    },
+    "automated_short_name": {
+        "new_name": {
+            "tag_type": "Germination",
+            "value": "Germinated",
+            "short_name": ""
+        },
+        "repeated": {
+            "tag_type": "Germination",
+            "value": "Germination Pending",
+            "short_name": ""
+        }
+    },
+    "bad_data": {
+        "existing_short_name": {
+            "tag_type": "Germination",
+            "value": "Germination Failed",
+            "short_name": "G"
+        },
+        "repeated_tag": {
+            "tag_type": "Germination",
+            "value": "Germinated",
+            "short_name": ""
+        }
+    }
+}

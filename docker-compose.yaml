@@ -4,8 +4,6 @@ services:
   seed_x_api:
     build:
       context: ./seed_x
-    volumes:
-      - ./seed_x:/app/
     ports:
       - 8000:8000
     env_file:
